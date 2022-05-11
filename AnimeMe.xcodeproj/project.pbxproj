@@ -16,6 +16,8 @@
 		CE7EDF7E282A34CB004F1034 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */; };
 		CECAD04C282B7D9D00945B78 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CECAD04B282B7D9D00945B78 /* Nunito-Bold.ttf */; };
 		CECAD04E282B7EDA00945B78 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CECAD04D282B7EDA00945B78 /* Nunito-Regular.ttf */; };
+		CECAD051282BB27900945B78 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD050282BB27900945B78 /* FilterTableViewCell.swift */; };
+		CECAD053282BBC5300945B78 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD052282BBC5300945B78 /* FilterTableViewController.swift */; };
 		CEFEE148282B578400E9FFD4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEE147282B578400E9FFD4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		CECAD04B282B7D9D00945B78 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		CECAD04D282B7EDA00945B78 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		CECAD050282BB27900945B78 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		CECAD052282BBC5300945B78 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		CEFEE147282B578400E9FFD4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +68,7 @@
 		CE7EDF66282A317E004F1034 /* AnimeMe */ = {
 			isa = PBXGroup;
 			children = (
+				CECAD04F282BB24500945B78 /* Views */,
 				CEFEE149282B628900E9FFD4 /* Resources */,
 				CE7EDF7C282A346B004F1034 /* Controllers */,
 				CE7EDF7B282A3395004F1034 /* Storyboards */,
@@ -90,8 +95,17 @@
 				CE7EDF6B282A317E004F1034 /* ViewController.swift */,
 				CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */,
 				CEFEE147282B578400E9FFD4 /* MainViewController.swift */,
+				CECAD052282BBC5300945B78 /* FilterTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CECAD04F282BB24500945B78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECAD050282BB27900945B78 /* FilterTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CEFEE149282B628900E9FFD4 /* Resources */ = {
@@ -187,6 +201,8 @@
 				CE7EDF6C282A317E004F1034 /* ViewController.swift in Sources */,
 				CE7EDF68282A317E004F1034 /* AppDelegate.swift in Sources */,
 				CE7EDF6A282A317E004F1034 /* SceneDelegate.swift in Sources */,
+				CECAD051282BB27900945B78 /* FilterTableViewCell.swift in Sources */,
+				CECAD053282BBC5300945B78 /* FilterTableViewController.swift in Sources */,
 				CE7EDF7E282A34CB004F1034 /* IntroViewController.swift in Sources */,
 				CEFEE148282B578400E9FFD4 /* MainViewController.swift in Sources */,
 			);

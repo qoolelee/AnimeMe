@@ -75,7 +75,7 @@
                                                         <color key="backgroundColor" red="0.97591551089999995" green="0.95963708719999996" blue="0.074557612930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mop-a0-ART">
@@ -86,7 +86,7 @@
                                                         <color key="backgroundColor" red="0.97591551089999995" green="0.95963708719999996" blue="0.074557612930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -104,7 +104,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwg-PB-B0m">
                                 <rect key="frame" x="0.0" y="148" width="414" height="748"/>
                                 <connections>
-                                    <segue destination="1Ih-Ii-cNr" kind="embed" id="aXf-t3-aHB"/>
+                                    <segue destination="E7J-cc-ARi" kind="embed" id="Pkt-sW-uLr"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -126,6 +126,57 @@
             </objects>
             <point key="canvasLocation" x="1850.7246376811595" y="83.705357142857139"/>
         </scene>
+        <!--Filter Table View Controller-->
+        <scene sceneID="iVM-MT-8Hx">
+            <objects>
+                <tableViewController id="E7J-cc-ARi" customClass="FilterTableViewController" customModule="AnimeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Wg8-vV-xNm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="200" id="u0X-zZ-Ry5" customClass="FilterTableViewCell" customModule="AnimeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u0X-zZ-Ry5" id="MoK-zG-wrn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-k0-Vle">
+                                            <rect key="frame" x="20" y="11" width="374" height="178"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-gW-uNy">
+                                            <rect key="frame" x="40" y="148" width="93" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" systemColor="systemGray6Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="top" secondItem="MoK-zG-wrn" secondAttribute="topMargin" id="61e-Pi-KNY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KoL-gW-uNy" secondAttribute="bottom" constant="20" id="OMO-f4-sVN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rcq-k0-Vle" secondAttribute="trailing" id="SOI-FG-5cg"/>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="leading" secondItem="MoK-zG-wrn" secondAttribute="leadingMargin" id="VX8-s6-dv0"/>
+                                        <constraint firstItem="KoL-gW-uNy" firstAttribute="leading" secondItem="MoK-zG-wrn" secondAttribute="leadingMargin" constant="20" id="Wjt-Xt-0Nb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rcq-k0-Vle" secondAttribute="bottom" id="Xzs-Zn-24s"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="filterImageView" destination="rcq-k0-Vle" id="Jzw-oW-1Sd"/>
+                                    <outlet property="filterLable" destination="KoL-gW-uNy" id="3MB-gF-n16"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E7J-cc-ARi" id="Tm6-D7-5Fh"/>
+                            <outlet property="delegate" destination="E7J-cc-ARi" id="mCD-lf-023"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXV-3V-mFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="84"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eVu-w3-JfB">
             <objects>
@@ -145,25 +196,14 @@
             </objects>
             <point key="canvasLocation" x="940.57971014492762" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BcR-e5-ADz">
-            <objects>
-                <viewController id="1Ih-Ii-cNr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2Dd-Xi-sgB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jNO-Bj-i45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2710" y="84"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Kooler_Logo_C_pdf" width="257" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
