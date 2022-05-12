@@ -65,10 +65,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kD8-Lb-ajJ">
-                                        <rect key="frame" x="8" y="8" width="398" height="44"/>
+                                        <rect key="frame" x="23" y="8" width="368" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX7-66-VC0">
-                                                <rect key="frame" x="0.0" y="0.0" width="194" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="44"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="New Filter">
                                                     <backgroundConfiguration key="background" cornerRadius="15">
@@ -79,7 +79,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mop-a0-ART">
-                                                <rect key="frame" x="204" y="0.0" width="194" height="44"/>
+                                                <rect key="frame" x="189" y="0.0" width="179" height="44"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="History">
                                                     <backgroundConfiguration key="background" cornerRadius="15">
@@ -96,9 +96,9 @@
                                 <constraints>
                                     <constraint firstAttribute="bottomMargin" secondItem="kD8-Lb-ajJ" secondAttribute="bottom" id="5f8-rY-hd3"/>
                                     <constraint firstAttribute="height" constant="60" id="OKV-Jf-Mue"/>
-                                    <constraint firstItem="kD8-Lb-ajJ" firstAttribute="leading" secondItem="Qae-vN-qud" secondAttribute="leadingMargin" id="WhP-f5-1Ur"/>
+                                    <constraint firstItem="kD8-Lb-ajJ" firstAttribute="leading" secondItem="Qae-vN-qud" secondAttribute="leadingMargin" constant="15" id="WhP-f5-1Ur"/>
                                     <constraint firstItem="kD8-Lb-ajJ" firstAttribute="top" secondItem="Qae-vN-qud" secondAttribute="topMargin" id="bki-e0-k9t"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="kD8-Lb-ajJ" secondAttribute="trailing" id="e6g-oC-W5h"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="kD8-Lb-ajJ" secondAttribute="trailingMargin" constant="15" id="e6g-oC-W5h"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwg-PB-B0m">
@@ -114,8 +114,8 @@
                             <constraint firstItem="sMZ-IP-TzB" firstAttribute="trailing" secondItem="Kwg-PB-B0m" secondAttribute="trailing" id="3gy-Op-ax7"/>
                             <constraint firstAttribute="bottom" secondItem="Kwg-PB-B0m" secondAttribute="bottom" id="J9t-ex-oSA"/>
                             <constraint firstItem="Qae-vN-qud" firstAttribute="top" secondItem="sMZ-IP-TzB" secondAttribute="top" id="abT-Iv-lIO"/>
-                            <constraint firstItem="sMZ-IP-TzB" firstAttribute="trailing" secondItem="Qae-vN-qud" secondAttribute="trailing" id="fKY-zx-CM4"/>
-                            <constraint firstItem="Qae-vN-qud" firstAttribute="leading" secondItem="sMZ-IP-TzB" secondAttribute="leading" id="gbC-U1-DkC"/>
+                            <constraint firstAttribute="trailing" secondItem="Qae-vN-qud" secondAttribute="trailing" id="fKY-zx-CM4"/>
+                            <constraint firstItem="Qae-vN-qud" firstAttribute="leading" secondItem="HyW-sm-tcf" secondAttribute="leading" id="gbC-U1-DkC"/>
                             <constraint firstItem="Kwg-PB-B0m" firstAttribute="leading" secondItem="sMZ-IP-TzB" secondAttribute="leading" id="tjX-NP-DyE"/>
                             <constraint firstItem="Kwg-PB-B0m" firstAttribute="top" secondItem="Qae-vN-qud" secondAttribute="bottom" id="v99-6e-0fo"/>
                         </constraints>
@@ -130,35 +130,38 @@
         <scene sceneID="iVM-MT-8Hx">
             <objects>
                 <tableViewController id="E7J-cc-ARi" customClass="FilterTableViewController" customModule="AnimeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Wg8-vV-xNm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Wg8-vV-xNm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="200" id="u0X-zZ-Ry5" customClass="FilterTableViewCell" customModule="AnimeMe" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="u0X-zZ-Ry5" customClass="FilterTableViewCell" customModule="AnimeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u0X-zZ-Ry5" id="MoK-zG-wrn">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-k0-Vle">
-                                            <rect key="frame" x="20" y="11" width="374" height="178"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-k0-Vle">
+                                            <rect key="frame" x="30" y="11.5" width="354" height="177"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rcq-k0-Vle" secondAttribute="height" multiplier="2:1" id="hOJ-yv-2cp"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-gW-uNy">
-                                            <rect key="frame" x="40" y="148" width="93" height="21"/>
+                                            <rect key="frame" x="58" y="149.5" width="93" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" systemColor="systemGray6Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="top" secondItem="MoK-zG-wrn" secondAttribute="topMargin" id="61e-Pi-KNY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="KoL-gW-uNy" secondAttribute="bottom" constant="20" id="OMO-f4-sVN"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="rcq-k0-Vle" secondAttribute="trailing" id="SOI-FG-5cg"/>
-                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="leading" secondItem="MoK-zG-wrn" secondAttribute="leadingMargin" id="VX8-s6-dv0"/>
-                                        <constraint firstItem="KoL-gW-uNy" firstAttribute="leading" secondItem="MoK-zG-wrn" secondAttribute="leadingMargin" constant="20" id="Wjt-Xt-0Nb"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rcq-k0-Vle" secondAttribute="bottom" id="Xzs-Zn-24s"/>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="centerY" secondItem="MoK-zG-wrn" secondAttribute="centerY" id="24R-tM-NfZ"/>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="bottomMargin" secondItem="KoL-gW-uNy" secondAttribute="bottom" constant="10" id="OMO-f4-sVN"/>
+                                        <constraint firstItem="KoL-gW-uNy" firstAttribute="leading" secondItem="rcq-k0-Vle" secondAttribute="leadingMargin" constant="20" id="Wjt-Xt-0Nb"/>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="leading" secondItem="MoK-zG-wrn" secondAttribute="leadingMargin" constant="10" id="fI3-11-SPU"/>
+                                        <constraint firstItem="rcq-k0-Vle" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KoL-gW-uNy" secondAttribute="trailing" constant="20" symbolic="YES" id="htz-IF-WdH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rcq-k0-Vle" secondAttribute="trailing" constant="10" id="qkS-Mw-9N7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -199,6 +202,7 @@
     </scenes>
     <resources>
         <image name="Kooler_Logo_C_pdf" width="257" height="60"/>
+        <image name="restaurant" width="640" height="640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
