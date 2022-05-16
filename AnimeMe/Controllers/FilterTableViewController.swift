@@ -8,8 +8,9 @@
 import UIKit
 
 class FilterTableViewController: UITableViewController {
+    var index = 0
     
-    var filterNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oy ster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "RoyalOak", "CASK Pub and Kitchen"]
+    var filterNames: [String]!
     
     enum Section{
         case all
@@ -30,7 +31,7 @@ class FilterTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        return 200
     }
 
     // MARK: - Table view data source

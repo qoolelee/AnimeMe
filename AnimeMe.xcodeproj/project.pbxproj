@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE21F864282E3267004D8F9C /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21F863282E3267004D8F9C /* MainPageViewController.swift */; };
+		CE690E83282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E81282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf */; };
+		CE690E84282D0F1F007CCDD0 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E82282D0F1F007CCDD0 /* Montserrat-Bold.ttf */; };
+		CE690E87282D0F8B007CCDD0 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E85282D0F8B007CCDD0 /* Montserrat-Italic.ttf */; };
+		CE690E88282D0F8B007CCDD0 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E86282D0F8B007CCDD0 /* Montserrat-Regular.ttf */; };
+		CE690E8B282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E89282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf */; };
+		CE690E8C282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E8A282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf */; };
 		CE7EDF68282A317E004F1034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF67282A317E004F1034 /* AppDelegate.swift */; };
 		CE7EDF6A282A317E004F1034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF69282A317E004F1034 /* SceneDelegate.swift */; };
 		CE7EDF6C282A317E004F1034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF6B282A317E004F1034 /* ViewController.swift */; };
@@ -14,14 +21,19 @@
 		CE7EDF71282A3183004F1034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7EDF70282A3183004F1034 /* Assets.xcassets */; };
 		CE7EDF74282A3183004F1034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7EDF72282A3183004F1034 /* LaunchScreen.storyboard */; };
 		CE7EDF7E282A34CB004F1034 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */; };
-		CECAD04C282B7D9D00945B78 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CECAD04B282B7D9D00945B78 /* Nunito-Bold.ttf */; };
-		CECAD04E282B7EDA00945B78 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CECAD04D282B7EDA00945B78 /* Nunito-Regular.ttf */; };
 		CECAD051282BB27900945B78 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD050282BB27900945B78 /* FilterTableViewCell.swift */; };
 		CECAD053282BBC5300945B78 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD052282BBC5300945B78 /* FilterTableViewController.swift */; };
 		CEFEE148282B578400E9FFD4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEE147282B578400E9FFD4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE21F863282E3267004D8F9C /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		CE690E81282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CE690E82282D0F1F007CCDD0 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		CE690E85282D0F8B007CCDD0 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		CE690E86282D0F8B007CCDD0 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		CE690E89282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE690E8A282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		CE7EDF64282A317E004F1034 /* AnimeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7EDF67282A317E004F1034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7EDF69282A317E004F1034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,8 +43,6 @@
 		CE7EDF73282A3183004F1034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7EDF75282A3183004F1034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		CECAD04B282B7D9D00945B78 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		CECAD04D282B7EDA00945B78 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		CECAD050282BB27900945B78 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		CECAD052282BBC5300945B78 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		CEFEE147282B578400E9FFD4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 				CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */,
 				CEFEE147282B578400E9FFD4 /* MainViewController.swift */,
 				CECAD052282BBC5300945B78 /* FilterTableViewController.swift */,
+				CE21F863282E3267004D8F9C /* MainPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,8 +130,12 @@
 		CEFEE150282B688500E9FFD4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CECAD04B282B7D9D00945B78 /* Nunito-Bold.ttf */,
-				CECAD04D282B7EDA00945B78 /* Nunito-Regular.ttf */,
+				CE690E8A282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf */,
+				CE690E89282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf */,
+				CE690E85282D0F8B007CCDD0 /* Montserrat-Italic.ttf */,
+				CE690E86282D0F8B007CCDD0 /* Montserrat-Regular.ttf */,
+				CE690E82282D0F1F007CCDD0 /* Montserrat-Bold.ttf */,
+				CE690E81282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -183,11 +198,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECAD04E282B7EDA00945B78 /* Nunito-Regular.ttf in Resources */,
+				CE690E83282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf in Resources */,
 				CE7EDF74282A3183004F1034 /* LaunchScreen.storyboard in Resources */,
+				CE690E8B282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				CE690E88282D0F8B007CCDD0 /* Montserrat-Regular.ttf in Resources */,
 				CE7EDF71282A3183004F1034 /* Assets.xcassets in Resources */,
-				CECAD04C282B7D9D00945B78 /* Nunito-Bold.ttf in Resources */,
+				CE690E87282D0F8B007CCDD0 /* Montserrat-Italic.ttf in Resources */,
+				CE690E8C282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf in Resources */,
 				CE7EDF6F282A317E004F1034 /* Main.storyboard in Resources */,
+				CE690E84282D0F1F007CCDD0 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE21F864282E3267004D8F9C /* MainPageViewController.swift in Sources */,
 				CE7EDF6C282A317E004F1034 /* ViewController.swift in Sources */,
 				CE7EDF68282A317E004F1034 /* AppDelegate.swift in Sources */,
 				CE7EDF6A282A317E004F1034 /* SceneDelegate.swift in Sources */,

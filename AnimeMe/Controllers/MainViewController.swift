@@ -9,19 +9,22 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet var newFiltersButton: UIButton!
+    @IBOutlet var historyButton: UIButton!
+    
+    var mainPageViewController: MainPageViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // navigationbar
         // title
-        if let customFont = UIFont(name: "HelveticaNeue-Bold", size: 24.0){
+        if let customFont = UIFont(name: "Montserrat-SemiBold", size: 24.0){
             setLeftAlignTitleView(font: customFont, text: "AnimeMe", textColor: UIColor.black)
         }
         
         // navigation icons spacing adjustment
         setNavigationIcons()
-        
         
     }
     
@@ -33,7 +36,7 @@ class MainViewController: UIViewController {
         let parentView = UIView(frame: CGRect(x: 0, y: 0, width: navFrame.width*3, height: navFrame.height))
         self.navigationItem.titleView = parentView
         
-        let label = UILabel(frame: .init(x: parentView.frame.minX + 10.0, y: parentView.frame.minY, width: parentView.frame.width, height: parentView.frame.height))
+        let label = UILabel(frame: .init(x: parentView.frame.minX + 15.0, y: parentView.frame.minY, width: parentView.frame.width, height: parentView.frame.height))
         label.backgroundColor = .clear
         label.numberOfLines = 2
         label.font = font
@@ -85,14 +88,11 @@ class MainViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        let destination = segue.destination
+        
+        if let pageViewController = destination as? MainPageViewController {
+            mainPageViewController = pageViewController }
+        }
 
 }
