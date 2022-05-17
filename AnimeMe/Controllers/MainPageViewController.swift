@@ -6,19 +6,26 @@
 //
 
 import UIKit
+protocol MainPageViewControllerDelegate: AnyObject {
+    func didUpdatePageIndex(currentIndex: Int)
+}
 
 class MainPageViewController: UIPageViewController {
     
-    var filterNames0 = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oy ster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "RoyalOak", "CASK Pub and Kitchen"]
+    var filterNames0 = ["Anime", "Titan", "Arcane"]
     
-    var filterNames1 = ["Meme restaurant", "Papa Kitchen"]
+    var filterNames1 = [String]()
     
     var currentIndex = 0
+    
+    weak var mainDelegate: MainPageViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dataSource = self
+        
+        delegate = self
         
         if let startingTableViewController = filterTableViewController(at: 0){
             setViewControllers([startingTableViewController], direction: .forward, animated: true, completion: nil)
@@ -36,6 +43,17 @@ class MainPageViewController: UIPageViewController {
     }
     */
 
+}
+
+extension MainPageViewController: UIPageViewControllerDelegate{
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    
+        if completed {
+            if let filterTableViewController = pageViewController.viewControllers?.first as? FilterTableViewController {
+                    currentIndex = filterTableViewController.index
+                    mainDelegate?.didUpdatePageIndex(currentIndex: filterTableViewController.index)
+            }
+    } }
 }
 
 extension MainPageViewController: UIPageViewControllerDataSource{
@@ -68,6 +86,8 @@ extension MainPageViewController: UIPageViewControllerDataSource{
             else{
                 filterTableViewController.filterNames = filterNames1
             }
+            
+            filterTableViewController.index = index
                 
             return filterTableViewController
         }

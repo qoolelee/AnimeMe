@@ -11,8 +11,41 @@ class MainViewController: UIViewController {
     
     @IBOutlet var newFiltersButton: UIButton!
     @IBOutlet var historyButton: UIButton!
+    @IBOutlet var buttonBackground: UIView!{
+        didSet{
+            buttonBackground.layer.cornerRadius = 10
+            buttonBackground.clipsToBounds = true
+        }
+    }
+    
+    @IBAction func newFilterButtonClicked(){
+        if mainPageViewController?.currentIndex == 0{
+            return
+        }
+        mainPageViewController?.backwardPage()
+    
+        // animate buttonBackGround
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            self.buttonBackground.transform = .identity
+        })
+    }
+    
+    @IBAction func historyButtonClicked(){
+        if mainPageViewController?.currentIndex == 1{
+            return
+        }
+        mainPageViewController?.forwardPage()
+        
+        // animate buttonBackGround
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            let dist = self.historyButton.frame.minX - self.newFiltersButton.frame.minX
+            let moveRightTransform = CGAffineTransform.init(translationX: dist, y: 0)
+            self.buttonBackground.transform = moveRightTransform
+        })
+    }
     
     var mainPageViewController: MainPageViewController?
+    var backgroundIndicator: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +59,11 @@ class MainViewController: UIViewController {
         // navigation icons spacing adjustment
         setNavigationIcons()
         
+        // button background initialize
+        if let posX = newFiltersButton.superview?.frame.minX, let posY = newFiltersButton.superview?.frame.minY{
+            buttonBackground.frame = CGRect(x: posX, y: posY, width: newFiltersButton.frame.width, height: newFiltersButton.frame.height)
+        }
+        
     }
     
     func setLeftAlignTitleView(font: UIFont, text: String, textColor: UIColor) {
@@ -36,7 +74,7 @@ class MainViewController: UIViewController {
         let parentView = UIView(frame: CGRect(x: 0, y: 0, width: navFrame.width*3, height: navFrame.height))
         self.navigationItem.titleView = parentView
         
-        let label = UILabel(frame: .init(x: parentView.frame.minX + 15.0, y: parentView.frame.minY, width: parentView.frame.width, height: parentView.frame.height))
+        let label = UILabel(frame: .init(x: parentView.frame.minX + 10.0, y: parentView.frame.minY, width: parentView.frame.width, height: parentView.frame.height))
         label.backgroundColor = .clear
         label.numberOfLines = 2
         label.font = font
@@ -87,12 +125,38 @@ class MainViewController: UIViewController {
         
     }
     
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
         
         if let pageViewController = destination as? MainPageViewController {
-            mainPageViewController = pageViewController }
+            mainPageViewController = pageViewController
+            mainPageViewController?.mainDelegate = self
         }
+    }
+    
+    func UpdateButtonBackGround(_ currentIndex: Int){
+        if currentIndex == 0{
+            // animate buttonBackGround
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                self.buttonBackground.transform = .identity
+            })
+        }
+        else{
+            // animate buttonBackGround
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                let dist = self.historyButton.frame.minX - self.newFiltersButton.frame.minX
+                let moveRightTransform = CGAffineTransform.init(translationX: dist, y: 0)
+                self.buttonBackground.transform = moveRightTransform
+            })
+        }
+    }
 
+}
+
+extension MainViewController: MainPageViewControllerDelegate{
+    func didUpdatePageIndex(currentIndex: Int) {
+        UpdateButtonBackGround(currentIndex)
+    }
 }

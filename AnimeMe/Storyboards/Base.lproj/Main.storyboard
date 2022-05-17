@@ -72,24 +72,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-vx-PqG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3y-o2-jk5">
+                                        <rect key="frame" x="40" y="10" width="128" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99055320020000004" green="0.94206213949999995" blue="0.46605497600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FVH-zx-LPG">
-                                        <rect key="frame" x="10" y="10" width="394" height="40"/>
+                                        <rect key="frame" x="23" y="10" width="368" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acr-Gl-Ip0">
-                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="40"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="New Filters">
                                                     <color key="titleColor" red="0.39977377650000001" green="0.37683022020000001" blue="0.1890814006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="newFilterButtonClicked" destination="GRq-p5-1Uh" eventType="touchUpInside" id="Rqp-rK-pIj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlz-un-1J9">
-                                                <rect key="frame" x="199.5" y="0.0" width="194.5" height="40"/>
+                                                <rect key="frame" x="186.5" y="0.0" width="181.5" height="40"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="History">
                                                     <color key="titleColor" red="0.39977377650000001" green="0.37683022020000001" blue="0.1890814006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="historyButtonClicked" destination="GRq-p5-1Uh" eventType="touchUpInside" id="2fl-iH-eAg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -97,10 +108,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="FVH-zx-LPG" secondAttribute="bottom" constant="10" id="461-7J-saZ"/>
-                                    <constraint firstItem="FVH-zx-LPG" firstAttribute="leading" secondItem="dI1-vx-PqG" secondAttribute="leading" constant="10" id="YBc-9v-H9R"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="FVH-zx-LPG" secondAttribute="trailing" constant="15" id="4em-Tx-zo3"/>
+                                    <constraint firstItem="FVH-zx-LPG" firstAttribute="leading" secondItem="dI1-vx-PqG" secondAttribute="leadingMargin" constant="15" id="KaJ-zp-xnK"/>
                                     <constraint firstAttribute="height" constant="60" id="ekG-7b-lY3"/>
                                     <constraint firstItem="FVH-zx-LPG" firstAttribute="top" secondItem="dI1-vx-PqG" secondAttribute="top" constant="10" id="gvP-Ld-vSo"/>
-                                    <constraint firstAttribute="trailing" secondItem="FVH-zx-LPG" secondAttribute="trailing" constant="10" id="wqy-68-C5Q"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-i7-hei">
@@ -124,8 +135,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="AnimeMe" id="bEU-5D-sg9"/>
                     <connections>
-                        <outlet property="historyButton" destination="Mlz-un-1J9" id="2pH-Ae-0xj"/>
-                        <outlet property="newFiltersButton" destination="acr-Gl-Ip0" id="dgl-nU-5Ff"/>
+                        <outlet property="buttonBackground" destination="m3y-o2-jk5" id="ZE2-8d-S0N"/>
+                        <outlet property="historyButton" destination="Mlz-un-1J9" id="ytk-cO-nuM"/>
+                        <outlet property="newFiltersButton" destination="acr-Gl-Ip0" id="iJI-4y-AkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZe-ss-eyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +149,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="FilterTableViewController" id="aEh-Ra-SUg" customClass="FilterTableViewController" customModule="AnimeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="urP-2q-6yv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -193,12 +205,13 @@
             </objects>
             <point key="canvasLocation" x="2628" y="-190"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavigationC Ontroller-->
         <scene sceneID="dn7-nI-v8M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aad-uv-fDy" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aad-uv-fDy" customClass="UINavigationCOntroller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yk1-Eu-Zh5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

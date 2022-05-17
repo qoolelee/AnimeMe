@@ -31,7 +31,12 @@ class FilterTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 210
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // add to history list
+        
     }
 
     // MARK: - Table view data source
@@ -46,7 +51,8 @@ class FilterTableViewController: UITableViewController {
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FilterTableViewCell
                 cell.filterLable?.text = filterName
-                cell.filterImageView?.image = UIImage(named: "restaurant")
+                let picName = "icon_filter_" + filterName
+                cell.filterImageView?.image = UIImage(named: picName)
                 
                 return cell
             }
