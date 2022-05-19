@@ -9,14 +9,22 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet var newFiltersButton: UIButton!
-    @IBOutlet var historyButton: UIButton!
-    @IBOutlet var buttonBackground: UIView!{
+    @IBOutlet var newFiltersButton: UIButton!{
         didSet{
-            buttonBackground.layer.cornerRadius = 10
-            buttonBackground.clipsToBounds = true
+            newFiltersButton.backgroundColor = UIColor(red: 254/255, green: 241/255, blue: 119/255, alpha: 1)
+            historyButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
+            
+            newFiltersButton.layer.cornerRadius = 10
+            newFiltersButton.clipsToBounds = true
         }
     }
+    @IBOutlet var historyButton: UIButton!{
+        didSet{
+            historyButton.layer.cornerRadius = 10
+            historyButton.clipsToBounds = true
+        }
+    }
+    
     
     @IBAction func newFilterButtonClicked(){
         if mainPageViewController?.currentIndex == 0{
@@ -24,10 +32,8 @@ class MainViewController: UIViewController {
         }
         mainPageViewController?.backwardPage()
     
-        // animate buttonBackGround
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
-            self.buttonBackground.transform = .identity
-        })
+        newFiltersButton.backgroundColor = UIColor(red: 254/255, green: 241/255, blue: 119/255, alpha: 1)
+        historyButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
     }
     
     @IBAction func historyButtonClicked(){
@@ -36,12 +42,8 @@ class MainViewController: UIViewController {
         }
         mainPageViewController?.forwardPage()
         
-        // animate buttonBackGround
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
-            let dist = self.historyButton.frame.minX - self.newFiltersButton.frame.minX
-            let moveRightTransform = CGAffineTransform.init(translationX: dist, y: 0)
-            self.buttonBackground.transform = moveRightTransform
-        })
+        newFiltersButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
+        historyButton.backgroundColor = UIColor(red: 254/255, green: 241/255, blue: 119/255, alpha: 1)
     }
     
     var mainPageViewController: MainPageViewController?
@@ -59,10 +61,6 @@ class MainViewController: UIViewController {
         // navigation icons spacing adjustment
         setNavigationIcons()
         
-        // button background initialize
-        if let posX = newFiltersButton.superview?.frame.minX, let posY = newFiltersButton.superview?.frame.minY{
-            buttonBackground.frame = CGRect(x: posX, y: posY, width: newFiltersButton.frame.width, height: newFiltersButton.frame.height)
-        }
         
     }
     
@@ -138,18 +136,12 @@ class MainViewController: UIViewController {
     
     func UpdateButtonBackGround(_ currentIndex: Int){
         if currentIndex == 0{
-            // animate buttonBackGround
-            UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
-                self.buttonBackground.transform = .identity
-            })
+            newFiltersButton.backgroundColor = UIColor(red: 254/255, green: 241/255, blue: 119/255, alpha: 1)
+            historyButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
         }
         else{
-            // animate buttonBackGround
-            UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
-                let dist = self.historyButton.frame.minX - self.newFiltersButton.frame.minX
-                let moveRightTransform = CGAffineTransform.init(translationX: dist, y: 0)
-                self.buttonBackground.transform = moveRightTransform
-            })
+            newFiltersButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
+            historyButton.backgroundColor = UIColor(red: 254/255, green: 241/255, blue: 119/255, alpha: 1)
         }
     }
 

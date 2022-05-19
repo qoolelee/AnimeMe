@@ -12,10 +12,6 @@ protocol MainPageViewControllerDelegate: AnyObject {
 
 class MainPageViewController: UIPageViewController {
     
-    var filterNames0 = ["Anime", "Titan", "Arcane"]
-    
-    var filterNames1 = [String]()
-    
     var currentIndex = 0
     
     weak var mainDelegate: MainPageViewControllerDelegate?
@@ -81,13 +77,14 @@ extension MainPageViewController: UIPageViewControllerDataSource{
         if let filterTableViewController = storyboard.instantiateViewController(withIdentifier: "FilterTableViewController") as? FilterTableViewController{
         
             if index == 0 {
-                filterTableViewController.filterNames = filterNames0
+                filterTableViewController.filters = Constant.filters0
             }
             else{
-                filterTableViewController.filterNames = filterNames1
+                filterTableViewController.filters = Constant.filters1
             }
             
             filterTableViewController.index = index
+            filterTableViewController.mainPageVewController = self
                 
             return filterTableViewController
         }

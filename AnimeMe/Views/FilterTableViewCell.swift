@@ -11,7 +11,7 @@ class FilterTableViewCell: UITableViewCell {
     
     @IBOutlet var filterImageView: UIImageView!{
         didSet{
-            filterImageView.layer.cornerRadius = 20.0
+            filterImageView.layer.cornerRadius = 20
             filterImageView.clipsToBounds = true
         }
     }
@@ -23,6 +23,7 @@ class FilterTableViewCell: UITableViewCell {
         // Initialization code
         addShadowLayer()
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -59,4 +60,5 @@ extension UIView {
         layer.shouldRasterize = true
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
+    
 }

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A170C37BA508F67595D7C0C6 /* Pods_AnimeMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9201230352F4425F88DA2B /* Pods_AnimeMe.framework */; };
 		CE21F864282E3267004D8F9C /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21F863282E3267004D8F9C /* MainPageViewController.swift */; };
+		CE56E30828334C1800E6A7E7 /* FilterDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56E30728334C1800E6A7E7 /* FilterDiffableDataSource.swift */; };
+		CE56E30A28334CF500E6A7E7 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56E30928334CF500E6A7E7 /* Filter.swift */; };
 		CE690E83282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E81282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf */; };
 		CE690E84282D0F1F007CCDD0 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E82282D0F1F007CCDD0 /* Montserrat-Bold.ttf */; };
 		CE690E87282D0F8B007CCDD0 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE690E85282D0F8B007CCDD0 /* Montserrat-Italic.ttf */; };
@@ -23,11 +26,21 @@
 		CE7EDF7E282A34CB004F1034 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */; };
 		CECAD051282BB27900945B78 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD050282BB27900945B78 /* FilterTableViewCell.swift */; };
 		CECAD053282BBC5300945B78 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAD052282BBC5300945B78 /* FilterTableViewController.swift */; };
+		CEE701642834A66400134CFF /* gif_03.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEE701612834A66400134CFF /* gif_03.gif */; };
+		CEE701652834A66400134CFF /* gif_02.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEE701622834A66400134CFF /* gif_02.gif */; };
+		CEE701662834A66400134CFF /* Anime.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEE701632834A66400134CFF /* Anime.gif */; };
+		CEF0E81828337587001750DD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0E81728337587001750DD /* Constant.swift */; };
+		CEF0E81A2833A61A001750DD /* FilterGifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0E8192833A61A001750DD /* FilterGifViewController.swift */; };
 		CEFEE148282B578400E9FFD4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEE147282B578400E9FFD4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D9201230352F4425F88DA2B /* Pods_AnimeMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FA46C5AE8A454A10B3B0D0 /* Pods-AnimeMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeMe.debug.xcconfig"; path = "Target Support Files/Pods-AnimeMe/Pods-AnimeMe.debug.xcconfig"; sourceTree = "<group>"; };
+		BF25CE1D99BDB199465108E8 /* Pods-AnimeMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeMe.release.xcconfig"; path = "Target Support Files/Pods-AnimeMe/Pods-AnimeMe.release.xcconfig"; sourceTree = "<group>"; };
 		CE21F863282E3267004D8F9C /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		CE56E30728334C1800E6A7E7 /* FilterDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDiffableDataSource.swift; sourceTree = "<group>"; };
+		CE56E30928334CF500E6A7E7 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		CE690E81282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		CE690E82282D0F1F007CCDD0 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		CE690E85282D0F8B007CCDD0 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
@@ -45,6 +58,11 @@
 		CE7EDF7D282A34CB004F1034 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		CECAD050282BB27900945B78 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		CECAD052282BBC5300945B78 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		CEE701612834A66400134CFF /* gif_03.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_03.gif; sourceTree = "<group>"; };
+		CEE701622834A66400134CFF /* gif_02.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_02.gif; sourceTree = "<group>"; };
+		CEE701632834A66400134CFF /* Anime.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Anime.gif; sourceTree = "<group>"; };
+		CEF0E81728337587001750DD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CEF0E8192833A61A001750DD /* FilterGifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGifViewController.swift; sourceTree = "<group>"; };
 		CEFEE147282B578400E9FFD4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,17 +71,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A170C37BA508F67595D7C0C6 /* Pods_AnimeMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		156E82D35CADF30E8BC1ABD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D9201230352F4425F88DA2B /* Pods_AnimeMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20433EA0855099CBAD53649A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8FA46C5AE8A454A10B3B0D0 /* Pods-AnimeMe.debug.xcconfig */,
+				BF25CE1D99BDB199465108E8 /* Pods-AnimeMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE56E30628334BB600E6A7E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE56E30728334C1800E6A7E7 /* FilterDiffableDataSource.swift */,
+				CE56E30928334CF500E6A7E7 /* Filter.swift */,
+				CEF0E81728337587001750DD /* Constant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CE7EDF5B282A317E004F1034 = {
 			isa = PBXGroup;
 			children = (
 				CE7EDF66282A317E004F1034 /* AnimeMe */,
 				CE7EDF65282A317E004F1034 /* Products */,
+				20433EA0855099CBAD53649A /* Pods */,
+				156E82D35CADF30E8BC1ABD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +126,8 @@
 		CE7EDF66282A317E004F1034 /* AnimeMe */ = {
 			isa = PBXGroup;
 			children = (
+				CEE701602834A5EE00134CFF /* gif */,
+				CE56E30628334BB600E6A7E7 /* Model */,
 				CECAD04F282BB24500945B78 /* Views */,
 				CEFEE149282B628900E9FFD4 /* Resources */,
 				CE7EDF7C282A346B004F1034 /* Controllers */,
@@ -107,6 +157,7 @@
 				CEFEE147282B578400E9FFD4 /* MainViewController.swift */,
 				CECAD052282BBC5300945B78 /* FilterTableViewController.swift */,
 				CE21F863282E3267004D8F9C /* MainPageViewController.swift */,
+				CEF0E8192833A61A001750DD /* FilterGifViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +168,16 @@
 				CECAD050282BB27900945B78 /* FilterTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE701602834A5EE00134CFF /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				CEE701632834A66400134CFF /* Anime.gif */,
+				CEE701622834A66400134CFF /* gif_02.gif */,
+				CEE701612834A66400134CFF /* gif_03.gif */,
+			);
+			path = gif;
 			sourceTree = "<group>";
 		};
 		CEFEE149282B628900E9FFD4 /* Resources */ = {
@@ -147,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7EDF78282A3183004F1034 /* Build configuration list for PBXNativeTarget "AnimeMe" */;
 			buildPhases = (
+				E64CBB5DA9B756778F7025D2 /* [CP] Check Pods Manifest.lock */,
 				CE7EDF60282A317E004F1034 /* Sources */,
 				CE7EDF61282A317E004F1034 /* Frameworks */,
 				CE7EDF62282A317E004F1034 /* Resources */,
+				DCE5F7CC572B89070F65CCD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,11 +263,14 @@
 			files = (
 				CE690E83282D0F1F007CCDD0 /* Montserrat-BoldItalic.ttf in Resources */,
 				CE7EDF74282A3183004F1034 /* LaunchScreen.storyboard in Resources */,
+				CEE701642834A66400134CFF /* gif_03.gif in Resources */,
 				CE690E8B282D0F9C007CCDD0 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				CEE701662834A66400134CFF /* Anime.gif in Resources */,
 				CE690E88282D0F8B007CCDD0 /* Montserrat-Regular.ttf in Resources */,
 				CE7EDF71282A3183004F1034 /* Assets.xcassets in Resources */,
 				CE690E87282D0F8B007CCDD0 /* Montserrat-Italic.ttf in Resources */,
 				CE690E8C282D0F9C007CCDD0 /* Montserrat-SemiBold.ttf in Resources */,
+				CEE701652834A66400134CFF /* gif_02.gif in Resources */,
 				CE7EDF6F282A317E004F1034 /* Main.storyboard in Resources */,
 				CE690E84282D0F1F007CCDD0 /* Montserrat-Bold.ttf in Resources */,
 			);
@@ -212,17 +278,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DCE5F7CC572B89070F65CCD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeMe/Pods-AnimeMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeMe/Pods-AnimeMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimeMe/Pods-AnimeMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E64CBB5DA9B756778F7025D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimeMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE7EDF60282A317E004F1034 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE21F864282E3267004D8F9C /* MainPageViewController.swift in Sources */,
+				CE56E30A28334CF500E6A7E7 /* Filter.swift in Sources */,
 				CE7EDF6C282A317E004F1034 /* ViewController.swift in Sources */,
 				CE7EDF68282A317E004F1034 /* AppDelegate.swift in Sources */,
 				CE7EDF6A282A317E004F1034 /* SceneDelegate.swift in Sources */,
 				CECAD051282BB27900945B78 /* FilterTableViewCell.swift in Sources */,
 				CECAD053282BBC5300945B78 /* FilterTableViewController.swift in Sources */,
+				CEF0E81A2833A61A001750DD /* FilterGifViewController.swift in Sources */,
+				CE56E30828334C1800E6A7E7 /* FilterDiffableDataSource.swift in Sources */,
+				CEF0E81828337587001750DD /* Constant.swift in Sources */,
 				CE7EDF7E282A34CB004F1034 /* IntroViewController.swift in Sources */,
 				CEFEE148282B578400E9FFD4 /* MainViewController.swift in Sources */,
 			);
@@ -366,6 +478,7 @@
 		};
 		CE7EDF79282A3183004F1034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8FA46C5AE8A454A10B3B0D0 /* Pods-AnimeMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +507,7 @@
 		};
 		CE7EDF7A282A3183004F1034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF25CE1D99BDB199465108E8 /* Pods-AnimeMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
